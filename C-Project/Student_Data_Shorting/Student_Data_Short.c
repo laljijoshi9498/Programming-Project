@@ -4,6 +4,7 @@
 #define ROLLNUMBERWISE 1
 #define NAMEWISE 2
 #define MARKWISE 3
+#define MAXIMUMSTUDENT 5
 
 /* structure */
 struct Student
@@ -11,7 +12,7 @@ struct Student
 	signed int RollNo;
 	signed char Name[50];
 	float Mark;
-}Variable[5],Var;
+}Variable[MAXIMUMSTUDENT],Var;
 
 int element,temp1,temp2;
 
