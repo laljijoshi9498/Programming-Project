@@ -1,12 +1,17 @@
+/* Header File Include */
+
 #include<stdio.h>
 #include<string.h>
 
+
+/* Macro Define */
 #define ROLLNUMBERWISE 1
 #define NAMEWISE 2
 #define MARKWISE 3
 #define MAXIMUMSTUDENT 5
 
-/* structure */
+
+/* Structure Define*/
 struct Student
 {
 	signed int RollNo;
@@ -14,6 +19,8 @@ struct Student
 	float Mark;
 }Variable[MAXIMUMSTUDENT],Var;
 
+
+/* Global Variable */
 int element,temp1,temp2;
 
 
@@ -25,7 +32,9 @@ void short_rollnumber_wise(void);
 void short_name_wise(void);
 void short_mark_wise(void);
 
-main()
+
+/* MAin Function */
+int main()
 {
 	scan_student_data();
 
@@ -122,10 +131,12 @@ void print_student_data(void)
 {
 	element = sizeof(Variable)/sizeof(Variable[0]);
 	
-	printf("RollNo\tName\tMark\n");
+	printf("---------------------------------\n");
+	printf("RollNo\t\tName\t\tMark\n");
+	printf("---------------------------------\n");
 	for(temp1=0;temp1<element;temp1++)
 	{
-		printf("%d\t%s\t%f\n",Variable[temp1].RollNo,Variable[temp1].Name,Variable[temp1].Mark);
+		printf("%d\t\t%s\t\t%f\n",Variable[temp1].RollNo,Variable[temp1].Name,Variable[temp1].Mark);
 	}
 
 }
